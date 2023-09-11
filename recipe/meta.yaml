@@ -1,12 +1,12 @@
-{% set version = "0.0.1" %}
+{% set version = "1.0.0" %}
 
 package:
   name: r-w4mrutils
   version: "{{ version }}"
 
 source:
-  url: https://github.com/workflow4metabolomics/W4MRUtils/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: b6c2f7b3aae2bb88a8f27db40596a76bcd5f84b2d1324f8147787b070087c037
+  url: https://cran.r-project.org/src/contrib/W4MRUtils_{{ version }}.tar.gz
+  sha256: b76117870395d41d931393fa52019c177ba813c3e90a454af062a63bc715f9c3
 
 build:
   noarch: generic
