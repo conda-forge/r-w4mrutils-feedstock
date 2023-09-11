@@ -15,8 +15,10 @@ build:
 requirements:
   host:
     - r-base
+    - r-rlang
   run:
     - r-base
+    - r-rlang
 
 test:
   commands:
