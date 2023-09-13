@@ -5,7 +5,9 @@ package:
   version: "{{ version }}"
 
 source:
-  url: https://cran.r-project.org/src/contrib/W4MRUtils_{{ version }}.tar.gz
+  url:
+    - {{ cran_mirror }}/src/contrib/W4MRUtils_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/W4MRUtils/W4MRUtils_{{ version }}.tar.gz
   sha256: b76117870395d41d931393fa52019c177ba813c3e90a454af062a63bc715f9c3
 
 build:
