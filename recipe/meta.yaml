@@ -31,7 +31,7 @@ test:
 about:
   home: https://github.com/workflow4metabolomics/W4MRUtils
   license: AGPL-3.0-or-later
-  license_file: LICENSE.md
+  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/AGPL-3
   summary: 'Some utils tools for W4M'
   description: |
     Provides a set of utility function to prevent the spread of
