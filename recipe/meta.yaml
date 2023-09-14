@@ -1,22 +1,26 @@
-{% set version = "0.0.1" %}
+{% set version = "1.0.0" %}
 
 package:
   name: r-w4mrutils
   version: "{{ version }}"
 
 source:
-  url: https://github.com/workflow4metabolomics/W4MRUtils/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: b6c2f7b3aae2bb88a8f27db40596a76bcd5f84b2d1324f8147787b070087c037
+  url:
+    - {{ cran_mirror }}/src/contrib/W4MRUtils_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/W4MRUtils/W4MRUtils_{{ version }}.tar.gz
+  sha256: b76117870395d41d931393fa52019c177ba813c3e90a454af062a63bc715f9c3
 
 build:
   noarch: generic
-  number: 1
+  number: 0
 
 requirements:
   host:
     - r-base
+    - r-rlang
   run:
     - r-base
+    - r-rlang
 
 test:
   commands:
@@ -26,7 +30,7 @@ test:
 about:
   home: https://github.com/workflow4metabolomics/W4MRUtils
   license: AGPL-3.0-or-later
-  license_file: LICENSE.md
+  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/AGPL-3
   summary: 'Some utils tools for W4M'
   description: |
     Provides a set of utility function to prevent the spread of
